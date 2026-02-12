@@ -1,0 +1,312 @@
+/* --- 1. 變數設定 (維持全站一致) --- */
+:root {
+    /* 您的個人網站配色 */
+    --primary-color: #4a6fa5;
+    --secondary-color: #166088;
+    --accent-color: #f47c7c;
+    --light-bg: #f8f9fa;
+    --dark-bg: #343a40; 
+    --text-color: #212529;
+    --text-secondary: #6c757d;
+    --light-text: #f8f9fa;
+    
+    --border-color: #e1e4e8;
+    --nav-height: 60px;
+    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    padding-top: var(--nav-height);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- 2. Global Header --- */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height);
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    z-index: 1000;
+}
+
+.site-logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--dark-bg);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (hover: hover) {
+    .site-logo:hover {
+        color: var(--primary-color);
+    }
+}
+.site-logo:active {
+    color: var(--primary-color);
+}
+
+.site-nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Nav 互動：目前頁面可以設為 active 狀態 */
+.site-nav a.active {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+@media (hover: hover) {
+    .site-nav a:hover {
+        color: var(--primary-color);
+    }
+}
+.site-nav a:active {
+    color: var(--primary-color);
+}
+
+/* --- 3. 內容容器 --- */
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 2rem 1.5rem;
+    flex: 1;
+}
+
+/* --- 標題區 --- */
+.page-intro {
+    display: flex;
+    justify-content: space-between; /* 文字靠左，圖片靠右 */
+    align-items: center; /* 垂直置中對齊 */
+    margin-bottom: 0rem; /* 維持原本設定 */
+}
+
+.intro-text {
+    flex: 1; /* 讓文字區塊填滿圖片以外的空間 */
+    padding-right: 1.5rem; /* 與右側圖片保持距離 */
+}
+
+.intro-image-container {
+    width: 180px;  /* 電腦版寬度 */
+    height: 180px; /* 高度與寬度相同，確保 1:1 */
+    flex-shrink: 0; /* 防止空間不足時圖片被擠壓變形 */
+    
+    /* 以下為美化設定 (可選) */
+    border-radius: 20px; /* 圓角 */
+    overflow: hidden;    /* 確保圖片不會超出圓角框 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 輕微陰影，增加立體感 */
+    border: 2px solid white; /* 加個白框讓照片更突出背景 */
+}
+
+.intro-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 關鍵：讓圖片填滿方形容器並裁切多餘部分，不會變形 */
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .intro-image-container {
+        width: 150px; /* 手機版稍微縮小 */
+        height: 150px;
+        border-radius: 20px;
+    }
+    
+    .intro-text {
+        padding-right: 1rem; /* 手機版間距縮小一點 */
+    }
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* --- 分隔線 (您的指定樣式) --- */
+hr {
+    border: 0;
+    height: 3px;
+    background-color: var(--accent-color);
+    width: 70px;
+    margin: 2rem 0 3rem 0; /* 調整垂直間距 */
+    margin-left: 0;
+    border-radius: 2px;
+}
+
+/* --- 內文排版 --- */
+.content-section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    color: var(--secondary-color);
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* 列表樣式 */
+ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+    color: var(--text-color);
+}
+
+/* --- 社群連結 (聯絡方式) --- */
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    transition: transform 0.2s, color 0.2s;
+}
+
+@media (hover: hover) {
+    .social-link:hover {
+        color: var(--accent-color); /* Hover 變珊瑚色 */
+        transform: translateY(-3px);
+    }
+}
+
+.social-media {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.social-media.active {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+@media (hover: hover) {
+    .social-media:hover {
+        color: var(--accent-color);
+    }
+}
+.social-media:active {
+    color: var(--accent-color);
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 1.5rem 1.5rem;
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.site-footer p {
+    color: var(--light-text);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.site-footer a {
+    color: var(--light-text);
+    margin: 0 0.5rem;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.site-footer a:hover {
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+}
+
+/* 響應式 */
+@media (max-width: 600px) {
+    .container { padding: 2rem 1.5rem; }
+    .site-header { padding: 0 1rem; }
+}
+
+/* --- 頁面載入動畫 --- */
+
+/* 1. 定義動畫關鍵影格：由下往上淡入 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. 基礎動畫類別 */
+.animate-in {
+    opacity: 0; /* 預設隱藏，等待動畫開始 */
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* 3. 設定延遲時間 (讓元素依序出現，才不會死板) */
+.delay-1 { animation-delay: 0.1s; } /* 標題區 */
+.delay-2 { animation-delay: 0.3s; } /* 分隔線 */
+.delay-3 { animation-delay: 0.5s; } /* 文章內容 */
+.delay-4 { animation-delay: 0.6s; } /* Footer */
+
+/* 讓 Header 也有一個很快的淡入，避免突然閃現 */
+/* .site-header {
+    animation: fadeInUp 0.5s ease-out forwards;
+} */
