@@ -1,0 +1,9 @@
+/* 隱藏網頁滾動條，讓截圖邊緣更乾淨 */
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+/* 確保網頁大背景顏色一致 */
+body { 
+    background-color: #0b0e14; 
+}
