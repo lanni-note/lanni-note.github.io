@@ -178,8 +178,8 @@ document.getElementById('topTotalInvested').innerText = '$' + formatFiat(topTota
 const topRoiEl = document.getElementById('topTotalROI');
 topRoiEl.innerText = (isTopPositive ? '+' : '') + formatFiat(topTotalROI) + '%';
 topRoiEl.className = isTopPositive 
-    ? 'text-bybitGreen font-bold bg-[#2ebd8520] px-2 py-0.5 rounded text-base' 
-    : 'text-bybitRed font-bold bg-[#f6465d20] px-2 py-0.5 rounded text-base';
+    ? 'text-bybitGreen font-bold text-base' 
+    : 'text-bybitRed font-bold text-base';
 
 const totalCtx = document.getElementById('totalChart').getContext('2d');
 let gradientTotal = totalCtx.createLinearGradient(0, 0, 0, 160);
