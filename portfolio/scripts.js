@@ -2,31 +2,31 @@
 const portfolioData = [
     {
         symbol: 'BTC', name: 'Bitcoin',
-        historicalPrices:   [66959.03, 71333.08, 74205.38],
-        historicalAvgCosts: [67941.44, 68037.23, 69188.37],
-        historicalAmounts:  [0.0004167, 0.0008215, 0.001213],
-        historicalInvested: [28, 56, 84]
+        historicalPrices:   [66959.03, 71333.08, 74205.38, 70411.29],
+        historicalAvgCosts: [67941.44, 68037.23, 69188.37, 69543.09],
+        historicalAmounts:  [0.0004167, 0.0008215, 0.001213, 0.001609],
+        historicalInvested: [28, 56, 84, 112]
     },
     {
         symbol: 'ETH', name: 'Ethereum',
-        historicalPrices:   [1993.78, 2081.02, 2328.51],
-        historicalAvgCosts: [1983.95, 2001.64, 2042.68],
-        historicalAmounts:  [0.003518, 0.006986, 0.01026],
-        historicalInvested: [7, 14, 21]
+        historicalPrices:   [1993.78, 2081.02, 2328.51, 2144.63],
+        historicalAvgCosts: [1983.95, 2001.64, 2042.68, 2070.53],
+        historicalAmounts:  [0.003518, 0.006986, 0.01026, 0.01351],
+        historicalInvested: [7, 14, 21, 28]
     },
     {
         symbol: 'SOL', name: 'Solana',
-        historicalPrices:   [85.85, 88.52, 94.62],
-        historicalAvgCosts: [81.35, 83.82, 84.40],
-        historicalAmounts:  [0.02998, 0.06996, 0.09995],
-        historicalInvested: [3, 6, 9]
+        historicalPrices:   [85.85, 88.52, 94.62, 89.99],
+        historicalAvgCosts: [81.35, 83.82, 84.40, 86.61],
+        historicalAmounts:  [0.02998, 0.06996, 0.09995, 0.1299],
+        historicalInvested: [3, 6, 9, 12]
     },
     {
         symbol: 'SUI', name: 'Sui',
-        historicalPrices:   [0.9127, 0.996, 1.0275],
-        historicalAvgCosts: [0.87, 0.8864, 0.9063],
-        historicalAmounts:  [4.4977, 8.8955, 13.0934],
-        historicalInvested: [4, 8, 12]
+        historicalPrices:   [0.9127, 0.996, 1.0275, 0.9434],
+        historicalAvgCosts: [0.87, 0.8864, 0.9063, 0.9357],
+        historicalAmounts:  [4.4977, 8.8955, 13.0934, 16.9915],
+        historicalInvested: [4, 8, 12, 16]
     }
 ];
 
