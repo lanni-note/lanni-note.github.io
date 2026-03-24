@@ -51,7 +51,7 @@ portfolioData.forEach((coin) => {
     const currentInvested = coin.historicalInvested[coin.historicalInvested.length - 1]; 
     
     const currentValuation = currentAmount * currentPrice;
-    const returnAmount = currentValuation - currentInvested;
+    const returnAmount = currentValuation - (currentAmount * currentAvgCost);
     const currentROI = (returnAmount / currentInvested) * 100;
 
     // 算出每一期的 ROI，並累加至大盤
