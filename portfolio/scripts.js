@@ -2,31 +2,31 @@
 const portfolioData = [
     {
         symbol: 'BTC', name: 'Bitcoin',
-        historicalPrices:   [66959.03, 71333.08, 74205.38, 70411.29, 66847.51],
-        historicalAvgCosts: [67941.44, 68037.23, 69188.37, 69543.09, 69289.03],
-        historicalAmounts:  [0.0004167, 0.0008215, 0.001213, 0.001609, 0.002018],
-        historicalInvested: [28, 56, 84, 112, 140]
+        historicalPrices:   [66959.03, 71333.08, 74205.38, 70411.29, 66847.51, 68597.12],
+        historicalAvgCosts: [67941.44, 68037.23, 69188.37, 69543.09, 69289.03, 69008.55],
+        historicalAmounts:  [0.0004167, 0.0008215, 0.001213, 0.001609, 0.002018, 0.002433],
+        historicalInvested: [28, 56, 84, 112, 140, 168]
     },
     {
         symbol: 'ETH', name: 'Ethereum',
-        historicalPrices:   [1993.78, 2081.02, 2328.51, 2144.63, 2061.05],
-        historicalAvgCosts: [1983.95, 2001.64, 2042.68, 2070.53, 2069.47],
-        historicalAmounts:  [0.003518, 0.006986, 0.01026, 0.01351, 0.0169],
-        historicalInvested: [7, 14, 21, 28, 35]
+        historicalPrices:   [1993.78, 2081.02, 2328.51, 2144.63, 2061.05, 2104.28],
+        historicalAvgCosts: [1983.95, 2001.64, 2042.68, 2070.53, 2069.47, 2071.52],
+        historicalAmounts:  [0.003518, 0.006986, 0.01026, 0.01351, 0.0169, 0.02026],
+        historicalInvested: [7, 14, 21, 28, 35, 42]
     },
     {
         symbol: 'SOL', name: 'Solana',
-        historicalPrices:   [85.85, 88.52, 94.62, 89.99, 81.05],
-        historicalAvgCosts: [81.35, 83.82, 84.40, 86.61, 87.99],
-        historicalAmounts:  [0.02998, 0.06996, 0.09995, 0.1299, 0.1699],
-        historicalInvested: [3, 6, 9, 12, 15]
+        historicalPrices:   [85.85, 88.52, 94.62, 89.99, 81.05, 79.59],
+        historicalAvgCosts: [81.35, 83.82, 84.40, 86.61, 87.99, 87.41],
+        historicalAmounts:  [0.02998, 0.06996, 0.09995, 0.1299, 0.1699, 0.1999],
+        historicalInvested: [3, 6, 9, 12, 15, 18]
     },
     {
         symbol: 'SUI', name: 'Sui',
-        historicalPrices:   [0.9127, 0.996, 1.0275, 0.9434, 0.8626],
-        historicalAvgCosts: [0.87, 0.8864, 0.9063, 0.9357, 0.9395],
-        historicalAmounts:  [4.4977, 8.8955, 13.0934, 16.9915, 21.1894],
-        historicalInvested: [4, 8, 12, 16, 20]
+        historicalPrices:   [0.9127, 0.996, 1.0275, 0.9434, 0.8626, 0.8697],
+        historicalAvgCosts: [0.87, 0.8864, 0.9063, 0.9357, 0.9395, 0.9312],
+        historicalAmounts:  [4.4977, 8.8955, 13.0934, 16.9915, 21.1894, 25.6871],
+        historicalInvested: [4, 8, 12, 16, 20, 24]
     }
 ];
 
